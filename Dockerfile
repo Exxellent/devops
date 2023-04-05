@@ -5,5 +5,3 @@ RUN apk update && pip install --upgrade pip && pip install -r web/req.txt
 WORKDIR /web/
 EXPOSE 1234
 ENTRYPOINT ["python", "-m", "flask", "run", "--host=0.0.0.0"]
-
-
