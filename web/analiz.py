@@ -2,7 +2,7 @@ import os
 import json
 pylint = os.popen('pylint ./app').read()
 if pylint:
-    print("Ошибки качества кода")
+    print("Ошибки в качестве кода (не критично)")
 
 os.system('bandit -iii -lll -q -r ./app/ -o bandit.json -f json ')
 with open('bandit.json', 'r') as f:
