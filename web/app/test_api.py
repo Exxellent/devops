@@ -10,10 +10,10 @@ def test_login():
     response = client.get('/auth/login')
     assert response.status_code == 200
 
-def test_index():
+def test_index1():
     response = client.get('/')
     assert response.status_code == 200
-def test_index():
+def test_index2():
     response = client.get('/')
     assert response.status_code == 200
 
