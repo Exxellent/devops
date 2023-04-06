@@ -8,5 +8,5 @@ os.system('bandit -iii -lll -q -r ./app/ -o bandit.json -f json ')
 with open('bandit.json', 'r') as f:
     b = json.load(f)
 if b['results']:
-    print(b['results'])
     raise RuntimeError('Ошибки')
+
