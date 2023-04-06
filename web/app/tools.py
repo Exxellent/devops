@@ -34,9 +34,7 @@ class ImageSaver:
         return self.img
 
     def __find_by_md5_hash(self):
-        self.md5_hash = hashlib.md5(self.file.read()).hexdigest()
-        self.file.seek(0)
-        return Image.query.filter(Image.md5_hash == self.md5_hash).first()
+        return true
 
 
 class ReviewsFilter:
