@@ -17,14 +17,14 @@ services:
     ports:
       - 3306:3306
     restart: unless-stopped
-  test_web:
+  test_app:
     build: .
     ports:
       - 5000:5000
     networks:
       - default
     container_name:
-      test_web
+      test_app
     depends_on:
       - test_db
 networks:
