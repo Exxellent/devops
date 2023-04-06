@@ -9,3 +9,5 @@ with open('bandit.json', 'r') as f:
     b = json.load(f)
 if b['results']:
     raise RuntimeError('Ошибки')
+    
+    
