@@ -7,6 +7,15 @@ from flask_login import UserMixin
 from flask import url_for
 from users_policy import UsersPolicy
 
+
+class new_tables(db.Model):
+    __tablename__ = 'new_tables'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    desciption = db.Column(db.Text, nullable=False)
+
+
 class Role(db.Model):
     __tablename__ = 'roles'
 

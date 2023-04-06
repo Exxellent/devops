@@ -40,7 +40,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for('index'))
+    return render_template(('auth/login.html'))
 
 def check_rights(action):
     def decorator(func):

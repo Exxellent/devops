@@ -14,9 +14,9 @@ def test_login3():
 def test_login4():
     response = client.get('/auth/login')
     assert response.status_code == 200
-def test_login5():
-    response = client.get('/auth/login')
-    assert response.status_code == 200
+def test_logout():
+    response=client.get('/auth/logout')
+    assert response.status_code==302
 
 
 
